@@ -459,4 +459,20 @@ footer p {
         padding: 0.8rem 1rem;
         font-size: 0.85rem;
     }
+    
+}
+
+/* Centralização dos títulos e tags na Seção 1 (Paradigmas) */
+.concept-card h3 {
+    text-align: center;
+}
+
+.concept-card .tag-label {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Centralização dos títulos dos 4 Cards da Linha do Tempo (Seção 3) */
+.timeline-card h2 {
+    text-align: center;
 }
