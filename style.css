@@ -1,0 +1,462 @@
+/* ==========================================================================
+   EvoluCode - Style.css
+   Tema Visual: Code Editor (Inspiração VS Code / Dracula)
+   Foco em Acessibilidade (a11y), Psicologia das Cores e Design Responsivo (Flexbox)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. VARIÁVEIS DE DESIGN SYSTEM & PSICOLOGIA DAS CORES
+   - Backgrounds Escuros (#1e1e2e / #282a36): Reduzem a fadiga visual, remetendo
+     diretamente aos ambientes de desenvolvimento (IDEs).
+   - Roxo / Ciano (#bd93f9 / #8be9fd): Transmitem inovação, tecnologia e foco.
+   - Verde (#50fa7b): Indicador de sucesso e estabilidade.
+   - Amarelo / Laranja (#f1fa8c / #ffb86c): Destacam desafios e pontos de atenção.
+   -------------------------------------------------------------------------- */
+:root {
+    /* Cores de Fundo (Palette Dracula / VS Code Dark) */
+    --bg-darker: #181824;        /* Fundo da página e rodapé */
+    --bg-editor: #1e1e2e;        /* Fundo das seções estilo janela de código */
+    --bg-card: #282a36;          /* Fundo dos cards (Dracula Current Line / Selection) */
+    --bg-alt: #21222c;           /* Fundo alternativo para contraste de seções */
+
+    /* Cores de Texto e Sintaxe */
+    --text-primary: #f8f8f2;     /* Texto principal de alto contraste (Acessibilidade WCAG AAA) */
+    --text-muted: #6272a4;       /* Comentários do código / Textos secundários */
+    
+    /* Cores de Destaque Semântico */
+    --cyan-accent: #8be9fd;      /* Títulos primários e variáveis */
+    --purple-accent: #bd93f9;    /* Palavras-chave / Links / Botões */
+    --green-accent: #50fa7b;     /* Strings / Símbolos de sucesso */
+    --orange-accent: #ffb86c;   /* Parâmetros / Avisos */
+    --pink-accent: #ff79c6;     /* Operadores e tags */
+    --red-alert: #ff5555;        /* Erros / Desafios técnicos */
+
+    /* Linhas e Bordas */
+    --border-color: #44475a;     /* Bordas sutis de componentes */
+    --border-highlight: #6272a4; /* Bordas ao passar o mouse (Hover) */
+
+    /* Tipografia */
+    --font-code: 'Fira Code', 'Consolas', 'Monaco', 'Courier New', monospace;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* --------------------------------------------------------------------------
+   2. RESET DE CSS & CONFIGURAÇÕES GERAIS DE ACESSIBILIDADE
+   -------------------------------------------------------------------------- */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que padding e border não quebrem o layout */
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    background-color: var(--bg-darker);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Foco Visível para Navegação via Teclado (Acessibilidade) */
+a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--cyan-accent);
+    outline-offset: 4px;
+}
+
+/* --------------------------------------------------------------------------
+   3. CABEÇALHO & NAVEGAÇÃO (&lt;header&gt; & &lt;nav&gt;)
+   -------------------------------------------------------------------------- */
+header {
+    background-color: var(--bg-editor);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.logo {
+    font-family: var(--font-code);
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--pink-accent);
+    letter-spacing: -0.5px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-family: var(--font-code);
+    font-size: 0.9rem;
+    transition: color 0.2s ease-in-out;
+}
+
+nav a:hover {
+    color: var(--cyan-accent);
+}
+
+/* --------------------------------------------------------------------------
+   4. HERO SECTION (APRESENTAÇÃO PRINCIPAL)
+   -------------------------------------------------------------------------- */
+.hero-section {
+    padding: 5rem 1.5rem;
+    background: linear-gradient(180deg, var(--bg-darker) 0%, var(--bg-editor) 100%);
+    border-bottom: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+/* Aplicação de Fonte Monospace nos Títulos conforme solicitado */
+.hero-section h1,
+.section-header h2 {
+    font-family: var(--font-code);
+}
+
+.hero-section h1 {
+    font-size: 2.5rem;
+    color: var(--cyan-accent);
+    margin-bottom: 1.2rem;
+    line-height: 1.3;
+}
+
+.hero-section p {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: var(--purple-accent);
+    color: #181824;
+    font-family: var(--font-code);
+    font-weight: bold;
+    padding: 0.8rem 1.8rem;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+}
+
+.btn-primary:hover {
+    background-color: var(--cyan-accent);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(139, 233, 253, 0.25);
+}
+
+/* --------------------------------------------------------------------------
+   5. ESTRUTURA GERAL DAS SEÇÕES DE CONTEÚDO
+   -------------------------------------------------------------------------- */
+.content-section {
+    padding: 4.5rem 1.5rem;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.bg-alt {
+    background-color: var(--bg-alt);
+    max-width: 100%;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+}
+
+.section-header h2 {
+    font-size: 1.9rem;
+    color: var(--purple-accent);
+    margin-bottom: 0.6rem;
+}
+
+.section-header p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+}
+
+/* --------------------------------------------------------------------------
+   6. SEÇÃO 1: CONCEITOS & BADGES / TAGS DE LINGUAGEM
+   -------------------------------------------------------------------------- */
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.concept-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.8rem;
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.concept-card h3 {
+    font-family: var(--font-code);
+    color: var(--green-accent);
+    font-size: 1.2rem;
+}
+
+/* Estilização da tag decorativa de sintaxe */
+.tag-label {
+    font-family: var(--font-code);
+    font-size: 0.8rem;
+    color: var(--orange-accent);
+    background-color: rgba(255, 184, 108, 0.1);
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 184, 108, 0.2);
+    width: fit-content;
+}
+
+.challenge-box {
+    margin-top: auto;
+    background-color: rgba(255, 85, 85, 0.08);
+    border-left: 3px solid var(--red-alert);
+    padding: 0.8rem 1rem;
+    font-size: 0.9rem;
+    border-radius: 0 4px 4px 0;
+    color: var(--text-primary);
+}
+
+/* Classe utilitária reutilizável para Badges/Tags no texto (<span class="tag">) */
+.tag {
+    font-family: var(--font-code);
+    font-size: 0.85em;
+    color: var(--pink-accent);
+    background-color: rgba(255, 121, 198, 0.12);
+    padding: 0.15em 0.4em;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 121, 198, 0.25);
+    white-space: nowrap;
+}
+
+/* --------------------------------------------------------------------------
+   7. SEÇÃO 2: ARQUITETURAS DE DISTRIBUIÇÃO
+   -------------------------------------------------------------------------- */
+.timeline-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.architecture-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-left: 4px solid var(--cyan-accent);
+    border-radius: 6px;
+    padding: 1.5rem 1.8rem;
+}
+
+.architecture-card h3 {
+    font-family: var(--font-code);
+    color: var(--cyan-accent);
+    margin-bottom: 0.6rem;
+}
+
+.architecture-card p {
+    color: var(--text-primary);
+    margin-bottom: 0.3rem;
+}
+
+/* --------------------------------------------------------------------------
+   8. SEÇÃO 3: LINHA DO TEMPO COM 4 CARDS LADO A LADO (FLEXBOX)
+   - Layout Flexbox com flex-wrap para ajustar em dispositivos móveis.
+   - Imagens responsivas no topo de cada card sem distorção.
+   - Títulos <h2> em fontes Monospace.
+   -------------------------------------------------------------------------- */
+.cards-timeline {
+    display: flex; /* Flexbox ativado */
+    flex-direction: row; /* Alinhamento lado a lado */
+    flex-wrap: wrap; /* Quebra de linha responsiva em telas menores */
+    gap: 1.5rem; /* Espaçamento uniforme entre os 4 cards */
+    justify-content: center;
+    align-items: stretch; /* Mantém os cards com alturas iguais */
+}
+
+.timeline-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden; /* Mantém a imagem dentro da borda arredondada do card */
+    
+    /* Flexbox Responsivo: 
+       flex-grow: 1 (preenche espaço)
+       flex-shrink: 1 (encolhe se necessário)
+       flex-basis: 260px (largura base para cálculo) */
+    flex: 1 1 260px;
+    max-width: 310px; /* Garante proporção equilibrada no desktop */
+    
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Efeito de destaque do Card no Hover (IDE active file state) */
+.timeline-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--purple-accent);
+    box-shadow: 0 8px 24px rgba(189, 147, 249, 0.15);
+}
+
+/* Estilização Obrigatória das Imagens no Topo do Card */
+.card-img,
+.timeline-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover; /* Garante que a imagem preencha a largura sem distorcer */
+    object-position: center;
+    display: block;
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--bg-darker);
+}
+
+/* Estilização dos Títulos Monospace dentro dos Cards da Linha do Tempo */
+.timeline-card h2 {
+    font-family: var(--font-code); /* Fira Code / Consolas */
+    font-size: 1.35rem;
+    color: var(--purple-accent);
+    padding: 1.2rem 1.2rem 0.5rem 1.2rem;
+}
+
+/* Estilização do Parágrafo com o Resumo Histórico */
+.timeline-card p {
+    padding: 0 1.2rem 1.5rem 1.2rem;
+    font-size: 0.92rem;
+    color: var(--text-primary);
+    line-height: 1.55;
+}
+
+/* --------------------------------------------------------------------------
+   9. SEÇÃO 4: TABELA COMPARATIVA (2007 vs 2026)
+   -------------------------------------------------------------------------- */
+.table-wrapper {
+    overflow-x: auto; /* Permite rolagem horizontal suave em telas pequenas */
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--bg-card);
+    text-align: left;
+}
+
+th, td {
+    padding: 1.2rem 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+th {
+    background-color: var(--bg-editor);
+    font-family: var(--font-code);
+    color: var(--cyan-accent);
+    font-size: 0.95rem;
+}
+
+td {
+    color: var(--text-primary);
+    font-size: 0.93rem;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:hover {
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+/* --------------------------------------------------------------------------
+   10. RODAPÉ (&lt;footer&gt;)
+   -------------------------------------------------------------------------- */
+footer {
+    background-color: var(--bg-darker);
+    border-top: 1px solid var(--border-color);
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    color: var(--text-muted);
+    font-family: var(--font-code);
+    font-size: 0.85rem;
+}
+
+footer p {
+    margin-bottom: 0.4rem;
+}
+
+/* --------------------------------------------------------------------------
+   11. MEDIA QUERIES (RESPONSIVIDADE AVANÇADA)
+   -------------------------------------------------------------------------- */
+
+/* Tablets e Dispositivos Médios (&lt;= 992px) */
+@media (max-width: 992px) {
+    .timeline-card {
+        max-width: 48%; /* Exibe 2 cards por linha no tablet */
+    }
+}
+
+/* Celulares e Dispositivos Menores (&lt;= 600px) */
+@media (max-width: 600px) {
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        gap: 0.8rem;
+    }
+
+    .hero-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-section p {
+        font-size: 0.98rem;
+    }
+
+    .timeline-card {
+        max-width: 100%; /* Cada card ocupa a largura total na tela do celular */
+        flex-basis: 100%;
+    }
+
+    .concept-card {
+        flex-basis: 100%;
+    }
+
+    th, td {
+        padding: 0.8rem 1rem;
+        font-size: 0.85rem;
+    }
+}
