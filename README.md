@@ -31,37 +31,21 @@ Este projeto é uma aplicação web interativa desenvolvida como resposta a um d
 
 Siga as instruções abaixo para clonar e rodar o projeto localmente em sua máquina.
 
-### 📋 Pré-requisitos
-* Um navegador web atualizado (Google Chrome, Firefox, Edge, Safari).
-* Git instalado em sua máquina (opcional, para clonar via terminal).
+## 🏗️ Funcionamento
 
-### 💻 Passo a passo no terminal
-
-1. **Clonar o repositório:**
-```bash
-git clone [https://github.com/Weridiana/Desafio1_EvoluCode.git](https://github.com/Weridiana/Desafio1_EvoluCode.git)
-
-🏗️ Funcionamento
 A estrutura da aplicação foi dividida em componentes semânticos e organizada para facilitar a leitura e manutenção do código:
-
 index.html: Arquivo principal contendo a marcação semântica dividida em Seção de Paradigmas, Marcos Tecnológicos e a Linha do Tempo da Programação.
-
 Style.css: Folha de estilo responsável pela identidade visual do projeto.
-
 Variáveis CSS: Centralização de cores, fontes e espaçamentos no topo do arquivo.
-
 Layout Responsivo: Ajuste automático dos cards para diferentes tamanhos de tela.
-
 Componentização dos Cards: Estilização isolada para .concept-card e .timeline-card, garantindo alinhamento centralizado dos títulos e tags.
 
+## 🤖 Documentação do Uso de Inteligência Artificial
 
-🤖 Documentação do Uso de Inteligência Artificial
 Para otimizar o desenvolvimento, refatoração de código e estruturação da documentação, utilizou-se o modelo Gemini (Google AI) como co-piloto:
 
 Prompts empregados:
-
 HTML
-
 Crie uma Landing Page responsiva com a estrutura completa de uma página sobre o Tema Evolução no Desenvolvimento
 de Software nos últimos 20 anos.
 Utilize HTML semântico, empregue <main>, <section>, <article> no lugar de <div> sempre que adequado.
@@ -85,7 +69,6 @@ Gerenciamento de Estado e Ferramentas de Desenvolvimento.
 Crie o arquivo index.html. 
 
 CSS
-
 Crie um arquivo style.css para estilizar o projeto Desafio gerado.
 Empregue a psicologia das cores. 
 Utilize o tema Visual "Code Editor". Use fundo estilo editor de código (como tom VS Code ou Dracula) para os cards, utilize 
@@ -117,9 +100,7 @@ Instruções de Implementação:
 ‌Utilize URLs de imagens de exemplo de bancos de imagens gratuitos (como Unsplash, Pixabay ou Pexels) ou referências locais 
 sintaticamente corretas.
 
-
 README
-
 Crie o arquivo README.md completo, profissional, bem formatado em Markdown para o projeto Desafio gerado. 
 Utilize ícones/emojis e blocos de código para tornar a leitura agradável.
 Siga a estrutura das seções abaixo:
@@ -146,10 +127,21 @@ Desenvolvedora: Weridiana Maria & Gemini
 GitHub (https://github.com/Weridiana)
 Linkedin (www.linkedin.com/in/weridianamaria)
 
-
-👩‍💻 Quem Desenvolveu?
+## 👩‍💻 Quem Desenvolveu?
 Desenvolvido por Weridiana Maria em colaboração com o Gemini (Google AI).
 
 GitHub: https://github.com/Weridiana
-
 LinkedIn: www.linkedin.com/in/weridianamaria
+
+### 📋 Pré-requisitos
+* Um navegador web atualizado (Google Chrome, Firefox, Edge, Safari).
+* Git instalado em sua máquina (opcional, para clonar via terminal).
+
+### 💻 Passo a passo no terminal
+
+1. **Clonar o repositório:**
+```bash
+git clone [https://github.com/Weridiana/Desafio1_EvoluCode.git](https://github.com/Weridiana/Desafio1_EvoluCode.git)
+
+
+
