@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EvoluCode - 20 Anos de Evolução no Desenvolvimento de Software</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+    <!-- Cabeçalho Principal -->
+    <header>
+        <div class="header-container">
+            <span class="logo">&lt;EvoluCode /&gt;</span>
+            <nav>
+                <ul>
+                    <li><a href="#hero">Início</a></li>
+                    <li><a href="#paradigmas">Paradigmas</a></li>
+                    <li><a href="#arquiteturas">Arquiteturas</a></li>
+                    <li><a href="#linha-do-tempo">Linha do Tempo</a></li>
+                    <li><a href="#comparativo">Comparativo</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main>
+
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <h1>Da Programação Monolítica à Co-criação com IA</h1>
+                <p>Uma jornada técnica pelas transformações de linguagens, paradigmas, arquiteturas e processos que moldaram a engenharia de software de 2007 a 2026.</p>
+                <a href="#paradigmas" class="btn-primary">Explorar a Evolução</a>
+            </div>
+        </section>
+
+        <!-- Seção 1: Linguagens e Paradigmas -->
+        <section id="paradigmas" class="content-section">
+            <header class="section-header">
+                <h2>Linguagens e Paradigmas (O Custo da Abstração)</h2>
+                <p>A migração do modelo puramente imperativo para abordagens declarativas, reativas e com tipagem estática moderna.</p>
+            </header>
+
+            <div class="grid-container">
+                <article class="concept-card">
+                    <h3>Paradigma Imperativo & OOP Clássico</h3>
+                    <p class="tag-label">Marco: Java 5/6, C++, C# 2.0</p>
+                    <p>Foco na instrução passo a passo e no gerenciamento manual de estado. Oferecia alto controle de execução e alocação de memória, mas trazia grande verbozidade e complexidade em concorrência.</p>
+                    <div class="challenge-box">
+                        <strong>Maior Desafio:</strong> Threading síncrono, race conditions e alto acoplamento em hierarquias complexas de classes.
+                    </div>
+                </article>
+
+                <article class="concept-card">
+                    <h3>Programação Declarativa & Reativa</h3>
+                    <p class="tag-label">Marco: Haskell, Scala, React, RxJS</p>
+                    <p>O desenvolvedor descreve <em>o que</em> o programa deve realizar, em vez de <em>como</em> alterar estados. Popularizou o fluxo de dados unidirecional e funções puras para interfaces e pipelines de dados.</p>
+                    <div class="challenge-box">
+                        <strong>Maior Desafio:</strong> Curva de aprendizado elevada, depuração de fluxos assíncronos e overhead de abstração na memória.
+                    </div>
+                </article>
+
+                <article class="concept-card">
+                    <h3>Tipagem Estática Moderna & Compilação Segura</h3>
+                    <p class="tag-label">Marco: Rust, TypeScript, Go</p>
+                    <p>Uniu a produtividade das linguagens dinâmicas à segurança em tempo de compilação. Introduziu conceitos como <em>ownership</em> sem Garbage Collector (Rust) e tipagem estrutural na Web (TypeScript).</p>
+                    <div class="challenge-box">
+                        <strong>Maior Desafio:</strong> Tempos de compilação mais longos e rígidas regras de validação no ciclo de desenvolvimento.
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Seção 2: Arquiteturas de Distribuição -->
+        <section id="arquiteturas" class="content-section bg-alt">
+            <header class="section-header">
+                <h2>Arquiteturas de Distribuição (Alcance e Escala)</h2>
+                <p>Como a infraestrutura e a topologia dos sistemas evoluíram para suportar bilhões de requisições globais.</p>
+            </header>
+
+            <div class="timeline-stack">
+                <article class="architecture-card">
+                    <h3>Monolito Tradicional (2007)</h3>
+                    <p><strong>Alcance:</strong> Aplicações locais, intranets corporativas e web baseada em servidor (SSR com renderização síncrona).</p>
+                    <p><strong>Escala:</strong> Escalonamento vertical (scale-up). Aumentar a capacidade exigia servidores mais potentes (CPU/RAM).</p>
+                </article>
+
+                <article class="architecture-card">
+                    <h3>Arquitetura Orientada a Serviços & Microsserviços (2012)</h3>
+                    <p><strong>Alcance:</strong> Ecossistemas web e mobile globais com equipes distribuídas e implantações independentes.</p>
+                    <p><strong>Escala:</strong> Escalonamento horizontal (scale-out). Serviços divididos por domínio de negócio e orquestrados em containers.</p>
+                </article>
+
+                <article class="architecture-card">
+                    <h3>Serverless & Event-Driven (2017)</h3>
+                    <p><strong>Alcance:</strong> Aplicações reativas orientadas a eventos e processamento sob demanda com cobrança por execução.</p>
+                    <p><strong>Escala:</strong> Elasticidade automática e instantânea gerenciada por provedores de nuvem pública.</p>
+                </article>
+
+                <article class="architecture-card">
+                    <h3>Edge Computing & Sistemas Distribuídos Autônomos (2026)</h3>
+                    <p><strong>Alcance:</strong> Execução de lógica de negócios e inferência de IA na borda da rede, próxima ao usuário final.</p>
+                    <p><strong>Escala:</strong> Global, ultra-baixa latência com consistência eventual e roteamento inteligente alimentado por malhas de serviços.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Seção 3: A Mudança de Raciocínio Lógico (COMO desenvolvemos) -->
+        <section id="linha-do-tempo" class="content-section">
+            <header class="section-header">
+                <h2>A Mudança de Raciocínio Lógico (COMO desenvolvemos)</h2>
+                <p>Linha do tempo contendo as transformações operacionais e conceituais divididas em períodos de 5 anos.</p>
+            </header>
+
+            <div class="cards-timeline">
+                <article class="timeline-card">
+                    <h2>2007 a 2011</h2>
+                    <p>A transição do modelo Cascata para o Ágil (Scrum/Kanban) e a consolidação dos smartphones (iOS e Android). O raciocínio era focado no desenvolvimento para desktop/web tradicional, migrando gradualmente para a web responsiva e aplicativos nativos, utilizando controle de versão centralizado (SVN) e deploy manual via FTP ou scripts locais.</p>
+                </article>
+
+                <article class="timeline-card">
+                    <h2>2012 a 2016</h2>
+                    <p>A ascensão da cultura DevOps, conteinerização com Docker e popularização do Git/GitHub. O raciocínio lógico passou a incorporar integração e entrega contínuas (CI/CD) e a divisão de monolitos em microsserviços. A web consolidou as Single Page Applications (SPAs) com frameworks dinâmicos e APIs RESTful.</p>
+                </article>
+
+                <article class="timeline-card">
+                    <h2>2017 a 2021</h2>
+                    <p>Consolidação da Nuvem Nativa (Cloud Native), orquestração de containers com Kubernetes e arquitetura Serverless. A engenharia adotou a infraestrutura como código (IaC), GraphQL e sistemas orientados a eventos, enquanto o front-end migrou fortemente para linguagens tipadas (TypeScript) e componentes reativos.</p>
+                </article>
+
+                <article class="timeline-card">
+                    <h2>2022 a 2026</h2>
+                    <p>A era da Engenharia Assistida por Inteligência Artificial e Agentes Autônomos. O raciocínio do desenvolvedor evoluiu da escrita de linhas de código sintáticas para a orquestração de contexto, arquitetura de prompts, validação de saídas de IA generativa e implementação de Modelos de Linguagem na borda (Edge AI).</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Seção 4: Tabela Comparativa -->
+        <section id="comparativo" class="content-section bg-alt">
+            <header class="section-header">
+                <h2>Tabela Comparativa (2007 vs 2026)</h2>
+                <p>Contraste técnico entre os ecossistemas de desenvolvimento em duas décadas distintas.</p>
+            </header>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Conceito</th>
+                            <th>Desenvolvimento em 2007</th>
+                            <th>Desenvolvimento em 2026</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Hospedagem</strong></td>
+                            <td>Servidores Dedicados / Data Centers Físicos / On-Premises / FTP</td>
+                            <td>Multi-Cloud / Serverless / Edge Computing / Containers Autônomos</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Linguagem Predominante no Front-end</strong></td>
+                            <td>JavaScript Vanilla (ES3) / jQuery / HTML4 / XHTML / ActionScript (Flash)</td>
+                            <td>TypeScript / WebAssembly (Rust, C++) / Frameworks Reativos Nativos</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Gerenciamento de Estado</strong></td>
+                            <td>DOM Manipulação Direta / Variáveis Globais / Sessão no Servidor (Cookies)</td>
+                            <td>Stores Reativas Unidirecionais / Signal-based State / Server State Sync / Edge Caching</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ferramentas de Desenvolvimento</strong></td>
+                            <td>IDEs Locais Pesadas / Editores de Texto Simples / Subversion (SVN) / FTP</td>
+                            <td>Copilotos de IA / Agentes de Código / GitOps / CI-CD Automatizado / Cloud IDEs</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2026 EvoluCode. Todos os direitos reservados.</p>
+            <p>Projeto desenvolvido para o Desafio 01 — <em>Tire sua Ideia do Papel</em>. Publicado via GitHub Pages.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
